@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="小米SU7 Ultra作为品牌旗舰轿车，凭借超800公里CLTC续航、2.78秒零百加速及全域智能驾驶能力，重新定义高端电动轿车标杆。">
+    <meta name="keywords" content="小米SU7 Ultra, 电动汽车评测, 智能驾驶, 超长续航, 性能轿车">
+    <meta name="author" content="AI编辑部">
+    <meta property="og:title" content="性能与智能再进化！小米SU7 Ultra深度评测解析">
+    <meta property="og:description" content="小米SU7 Ultra作为品牌旗舰轿车，凭借超800公里CLTC续航、2.78秒零百加速及全域智能驾驶能力，重新定义高端电动轿车标杆。">
+    <meta property="og:type" content="article">
+    <title>性能与智能再进化！小米SU7 Ultra深度评测解析</title>
+    
+    <!-- Google Analytics（替换为你的GA4 ID） -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        /* 导航 */
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar-brand {
+            font-size: 22px;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+        .navbar-nav a:hover { color: white; }
+        
+        /* 布局 */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            .sidebar { display: none; }
+        }
+        
+        /* 文章主体 */
+        .article-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 5px; }
+        .category-badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+        .article-desc {
+            font-size: 16px;
+            color: #666;
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-left: 4px solid #667eea;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 30px;
+        }
+        .article-content h2 {
+            font-size: 22px;
+            color: #1a1a2e;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .article-content p {
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: #444;
+        }
+        .article-content ul, .article-content ol {
+            margin: 15px 0 15px 25px;
+        }
+        .article-content li {
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #444;
+        }
+        
+        /* 广告区域 */
+        .ad-area {
+            margin: 30px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        /* 侧边栏 */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .sidebar-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .sidebar-card h3 {
+            font-size: 16px;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .sidebar-link {
+            display: block;
+            padding: 8px 0;
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .sidebar-link:hover { color: #667eea; }
+        
+        /* 标签 */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 30px;
+        }
+        .tag {
+            background: #f0f0f7;
+            color: #667eea;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            text-decoration: none;
+        }
+        .tag:hover { background: #667eea; color: white; }
+        
+        /* 页脚 */
+        footer {
+            background: #1a1a2e;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+        footer a { color: #aaa; text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: white; }
+    </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar">
+    <div class="navbar-inner">
+        <a href="index.html" class="navbar-brand">🔥 热点资讯站</a>
+        <div class="navbar-nav">
+            <a href="index.html">首页</a>
+            <a href="#">股票</a>
+            <a href="#">AI资讯</a>
+            <a href="#">游戏</a>
+        </div>
+    </div>
+</nav>
+
+<!-- 主内容区 -->
+<div class="container">
+    
+    <!-- 文章主体 -->
+    <main>
+        <div class="article-card">
+            <!-- 文章元数据 -->
+            <div class="article-meta">
+                <span class="category-badge">科技新闻</span>
+                <span>📅 2026-05-12 11:03:42</span>
+                <span>✍️ AI编辑部</span>
+            </div>
+            
+            <!-- 标题 -->
+            <h1>性能与智能再进化！小米SU7 Ultra深度评测解析</h1>
+            
+            <!-- 简介 -->
+            <div class="article-desc">小米SU7 Ultra作为品牌旗舰轿车，凭借超800公里CLTC续航、2.78秒零百加速及全域智能驾驶能力，重新定义高端电动轿车标杆。</div>
+            
+            <!-- 顶部广告 -->
+            <div class="ad-area">
+                
+    <!-- AdSense广告位（配置client_id后自动启用） -->
+    <div class="ad-placeholder" style="background:#f0f0f0;padding:20px;text-align:center;color:#999;margin:20px 0;border-radius:8px;">
+        广告位
+    </div>
+            </div>
+            
+            <!-- 文章正文 -->
+            <div class="article-content">
+                <h2>极致性能：重新定义电动轿跑标准</h2><p>小米SU7 Ultra搭载双电机四驱系统，综合功率达495kW，峰值扭矩838N·m，实测零百加速仅2.78秒。采用101kWh麒麟电池与800V高压平台，CLTC续航突破800公里，充电15分钟可补能510公里。赛道模式下，主动尾翼与CDC减震器联动，展现精准操控特性。</p><h2>智能生态：人车家全场景贯通</h2><p>新车搭载小米澎湃OS，中控16.1英寸3K屏支持五屏联动。智能驾驶系统配备双英伟达Orin芯片与激光雷达，实现城市NOA无图通勤。独创的“一键场景”功能可联动智能家居设备，当车辆驶入小区地库时，家中空调与照明系统自动启动。</p><h2>设计哲学：美学与功能的平衡</h2><p>采用水滴形激光雷达隐藏设计，风阻系数降至0.195Cd。内饰配备56英寸HUD与物理按键保留，运动座椅采用新型生物基面料。后备厢空间达517L，前备箱额外提供105L储物空间，兼顾实用性与设计感。</p>
+            </div>
+            
+            <!-- 中部广告 -->
+            <div class="ad-area">
+                
+    <!-- AdSense广告位（配置client_id后自动启用） -->
+    <div class="ad-placeholder" style="background:#f0f0f0;padding:20px;text-align:center;color:#999;margin:20px 0;border-radius:8px;">
+        广告位
+    </div>
+            </div>
+            
+            <!-- 标签 -->
+            <div class="tags">
+                <a href="#" class="tag">#小米SU7 Ultra</a><a href="#" class="tag">#电动汽车评测</a><a href="#" class="tag">#智能驾驶</a><a href="#" class="tag">#超长续航</a><a href="#" class="tag">#性能轿车</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+        <!-- 侧边广告 -->
+        <div class="sidebar-card">
+            <h3>📢 推荐</h3>
+            
+    <!-- AdSense广告位（配置client_id后自动启用） -->
+    <div class="ad-placeholder" style="background:#f0f0f0;padding:20px;text-align:center;color:#999;margin:20px 0;border-radius:8px;">
+        广告位
+    </div>
+        </div>
+        
+        <!-- 相关文章 -->
+        <div class="sidebar-card">
+            <h3>🔥 热门文章</h3>
+            <a href="index.html" class="sidebar-link">→ 返回首页</a>
+            <a href="#" class="sidebar-link">→ 更多科技新闻资讯</a>
+        </div>
+        
+        <!-- 关于 -->
+        <div class="sidebar-card">
+            <h3>ℹ️ 关于本站</h3>
+            <p style="font-size:14px;color:#666;line-height:1.7;">
+                本站聚合全网热点资讯，提供AI智能解析，帮助您快速了解最新动态。
+            </p>
+        </div>
+    </aside>
+    
+</div>
+
+<!-- 页脚 -->
+<footer>
+    <p>© 2026 热点资讯站 · 内容由AI生成，仅供参考</p>
+    <p style="margin-top:8px;">
+        <a href="#">隐私政策</a>
+        <a href="#">免责声明</a>
+        <a href="#">联系我们</a>
+    </p>
+</footer>
+
+</body>
+</html>
