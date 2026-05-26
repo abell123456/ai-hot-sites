@@ -3,452 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026年5月26日 今日热点资讯</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#165DFF',
-                        secondary: '#FF7D00',
-                        neutral: '#333647',
-                        light: '#F5F7FA',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
+    <meta name="description" content="聚合全网热点资讯，AI智能解析，股票、AI、游戏攻略一站获取">
+    <meta name="keywords" content="热点资讯,股票分析,AI资讯,游戏攻略">
+    <title>热点资讯站 - AI智能聚合</title>
+    
+<!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8709426424076910" crossorigin="anonymous"></script>
+    <meta name="baidu-site-verification" content="codeva-cV5xNx4FJP" />
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #f8f9fa;
+            color: #333;
         }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            }
-            .card-hover {
-                transition: all 0.3s ease;
-            }
-            .card-hover:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-            }
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        .hero h1 { font-size: 36px; margin-bottom: 15px; }
+        .hero p { font-size: 18px; opacity: 0.9; }
+        .update-time { font-size: 14px; opacity: 0.7; margin-top: 10px; }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            .sidebar { display: none; }
+            .hero h1 { font-size: 26px; }
+        }
+        
+        .article-list { display: flex; flex-direction: column; gap: 20px; }
+        .article-item {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .article-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        .article-item-inner { padding: 25px 30px; }
+        .cat-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .article-item h2 {
+            font-size: 20px;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .article-item p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #999;
+        }
+        .read-more {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .ad-area { margin: 20px 0; }
+        
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .sidebar-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .sidebar-card h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        footer {
+            background: #1a1a2e;
+            color: #aaa;
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            margin-top: 40px;
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans text-neutral">
-    <!-- 顶部导航 -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fa fa-newspaper-o text-primary text-2xl"></i>
-                <h1 class="text-xl font-bold text-neutral">今日热点资讯</h1>
-            </div>
-            <div class="flex items-center space-x-4">
-                <span class="text-gray-500 flex items-center">
-                    <i class="fa fa-calendar mr-2"></i>
-                    2026年5月26日 星期二
-                </span>
-                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
-                    实时更新
-                </span>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-inner">
+        <a href="index.html" class="navbar-brand">🔥 热点资讯站</a>
+        <div style="color:rgba(255,255,255,0.8);font-size:14px;">AI驱动 · 每日更新</div>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>🔥 今日热点资讯</h1>
+    <p>AI智能聚合 · 股票 · 科技 · 游戏</p>
+    <div class="update-time">最后更新：2026-05-26 15:03</div>
+</div>
+
+<div class="container">
+    <main>
+        <!-- 顶部广告 -->
+        <div class="ad-area">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8709426424076910"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+        
+        <!-- 文章列表 -->
+        <div class="article-list">
+            
+            <a href="原神最新角色攻略-20260526150312.html" class="article-item">
+                <div class="article-item-inner">
+                    <span class="cat-tag">游戏攻略</span>
+                    <h2>原神最新角色攻略 - 最新资讯与深度解析</h2>
+                    <p>本文深入分析原神最新角色攻略的最新动态，为您提供专业见解和实用建议。...</p>
+                    <div class="article-footer">
+                        <span>📅 2026-05-26 15:00:32</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            <a href="王者荣耀上分技巧-20260526150312.html" class="article-item">
+                <div class="article-item-inner">
+                    <span class="cat-tag">游戏攻略</span>
+                    <h2>王者荣耀上分技巧 - 最新资讯与深度解析</h2>
+                    <p>本文深入分析王者荣耀上分技巧的最新动态，为您提供专业见解和实用建议。...</p>
+                    <div class="article-footer">
+                        <span>📅 2026-05-26 15:01:03</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            <a href="科技新闻最新动态-20260526150312.html" class="article-item">
+                <div class="article-item-inner">
+                    <span class="cat-tag">科技新闻</span>
+                    <h2>科技新闻最新动态 - 最新资讯与深度解析</h2>
+                    <p>本文深入分析科技新闻最新动态的最新动态，为您提供专业见解和实用建议。...</p>
+                    <div class="article-footer">
+                        <span>📅 2026-05-26 15:01:35</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            <a href="科技新闻深度解析-20260526150312.html" class="article-item">
+                <div class="article-item-inner">
+                    <span class="cat-tag">科技新闻</span>
+                    <h2>科技新闻深度解析 - 最新资讯与深度解析</h2>
+                    <p>本文深入分析科技新闻深度解析的最新动态，为您提供专业见解和实用建议。...</p>
+                    <div class="article-footer">
+                        <span>📅 2026-05-26 15:02:09</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            <a href="今日A股涨停板分析-20260526150312.html" class="article-item">
+                <div class="article-item-inner">
+                    <span class="cat-tag">股票市场</span>
+                    <h2>今日A股涨停板分析 - 最新资讯与深度解析</h2>
+                    <p>本文深入分析今日A股涨停板分析的最新动态，为您提供专业见解和实用建议。...</p>
+                    <div class="article-footer">
+                        <span>📅 2026-05-26 15:02:40</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            <a href="美股科技股最新动态-20260526150312.html" class="article-item">
+                <div class="article-item-inner">
+                    <span class="cat-tag">股票市场</span>
+                    <h2>美股科技股最新动态 - 最新资讯与深度解析</h2>
+                    <p>本文深入分析美股科技股最新动态的最新动态，为您提供专业见解和实用建议。...</p>
+                    <div class="article-footer">
+                        <span>📅 2026-05-26 15:03:12</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <!-- 底部广告 -->
+        <div class="ad-area" style="margin-top:30px;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8709426424076910"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    </main>
+    
+    <aside class="sidebar">
+        <div class="sidebar-card">
+            <div style="font-size:12px;color:#888;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px;">ADVERTISEMENT</div>
+            
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8709426424076910"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        <div class="sidebar-card">
+            <h3>📂 分类</h3>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+                <a href="#" style="color:#555;text-decoration:none;font-size:14px;">📈 股票市场</a>
+                <a href="#" style="color:#555;text-decoration:none;font-size:14px;">🤖 AI资讯</a>
+                <a href="#" style="color:#555;text-decoration:none;font-size:14px;">🎮 游戏攻略</a>
+                <a href="#" style="color:#555;text-decoration:none;font-size:14px;">💻 科技新闻</a>
             </div>
         </div>
-    </header>
+    </aside>
+</div>
 
-    <!-- 分类导航 -->
-    <nav class="bg-white border-b border-gray-100 overflow-x-auto">
-        <div class="container mx-auto px-4">
-            <ul class="flex space-x-6 py-3 whitespace-nowrap">
-                <li><a href="#all" class="font-medium text-primary border-b-2 border-primary pb-3">全部</a></li>
-                <li><a href="#minsheng" class="font-medium text-gray-600 hover:text-primary transition">民生</a></li>
-                <li><a href="#education" class="font-medium text-gray-600 hover:text-primary transition">教育</a></li>
-                <li><a href="#ai" class="font-medium text-gray-600 hover:text-primary transition">AI</a></li>
-                <li><a href="#tech" class="font-medium text-gray-600 hover:text-primary transition">科技</a></li>
-                <li><a href="#sports" class="font-medium text-gray-600 hover:text-primary transition">体育</a></li>
-                <li><a href="#stock" class="font-medium text-gray-600 hover:text-primary transition">股市</a></li>
-                <li><a href="#ecommerce" class="font-medium text-gray-600 hover:text-primary transition">电商</a></li>
-                <li><a href="#entertainment" class="font-medium text-gray-600 hover:text-primary transition">娱乐</a></li>
-            </ul>
-        </div>
-    </nav>
+<footer>
+    <p>© 2026 热点资讯站 · 内容由AI生成，仅供参考</p>
+</footer>
 
-    <!-- 焦点新闻 -->
-    <section class="py-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- 主焦点新闻 -->
-                <div class="lg:col-span-2 relative rounded-xl overflow-hidden h-[400px] card-hover">
-                    <img src="https://picsum.photos/id/237/1200/800" alt="焦点新闻" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
-                        <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm inline-block mb-4 w-fit">头条</span>
-                        <h2 class="text-3xl font-bold text-white text-shadow mb-2">我国首条高温超导高速磁悬浮试验线建成通车 时速可达600公里</h2>
-                        <p class="text-white/90 mb-4 text-shadow line-clamp-2">标志着我国在高速磁悬浮技术领域实现全面领跑，将彻底改变未来城际交通出行格局。</p>
-                        <div class="flex items-center text-white/80 text-sm">
-                            <span><i class="fa fa-clock-o mr-1"></i> 2小时前</span>
-                            <span class="mx-3">·</span>
-                            <span>科技日报</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 右侧小焦点 -->
-                <div class="flex flex-col gap-6">
-                    <div class="relative rounded-xl overflow-hidden h-[188px] card-hover">
-                        <img src="https://picsum.photos/id/1/600/400" alt="新闻2" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-                            <span class="bg-primary/80 text-white px-2 py-0.5 rounded text-xs inline-block mb-2 w-fit">AI</span>
-                            <h3 class="text-xl font-bold text-white text-shadow mb-1">通用人工智能模型"盘古4.0"发布 性能较前代提升300%</h3>
-                            <div class="flex items-center text-white/80 text-xs">
-                                <span><i class="fa fa-clock-o mr-1"></i> 4小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative rounded-xl overflow-hidden h-[188px] card-hover">
-                        <img src="https://picsum.photos/id/20/600/400" alt="新闻3" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-                            <span class="bg-green-600/80 text-white px-2 py-0.5 rounded text-xs inline-block mb-2 w-fit">民生</span>
-                            <h3 class="text-xl font-bold text-white text-shadow mb-1">全国医保个人账户家庭共济政策今日起全面落地实施</h3>
-                            <div class="flex items-center text-white/80 text-xs">
-                                <span><i class="fa fa-clock-o mr-1"></i> 6小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 热点锐评 -->
-    <section class="py-8 bg-gradient-to-r from-primary/5 to-secondary/5">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold flex items-center">
-                    <i class="fa fa-comment text-secondary mr-2"></i>
-                    今日锐评
-                </h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-primary card-hover">
-                    <div class="flex items-center mb-3">
-                        <img src="https://picsum.photos/id/1005/40/40" alt="评论员" class="w-10 h-10 rounded-full mr-3">
-                        <div>
-                            <h4 class="font-bold">张雪峰</h4>
-                            <p class="text-xs text-gray-500">教育行业分析师</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-sm line-clamp-3">AI相关专业扩招10万是趋势，但学生不要盲目跟风，数学和计算机基础才是核心竞争力，别被所谓的「风口专业」割了韭菜。</p>
-                </div>
-                <div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-green-500 card-hover">
-                    <div class="flex items-center mb-3">
-                        <img src="https://picsum.photos/id/1012/40/40" alt="评论员" class="w-10 h-10 rounded-full mr-3">
-                        <div>
-                            <h4 class="font-bold">李稻葵</h4>
-                            <p class="text-xs text-gray-500">经济学家</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-sm line-clamp-3">这次降准0.5个百分点释放1万亿资金，重点还是要流向实体经济，尤其是高端制造和科创领域，房地产救市预期不宜过高。</p>
-                </div>
-                <div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-purple-500 card-hover">
-                    <div class="flex items-center mb-3">
-                        <img src="https://picsum.photos/id/1025/40/40" alt="评论员" class="w-10 h-10 rounded-full mr-3">
-                        <div>
-                            <h4 class="font-bold">李彦宏</h4>
-                            <p class="text-xs text-gray-500">AI行业专家</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-sm line-clamp-3">盘古4.0的发布标志着中国大模型已经进入第一梯队，未来3年通用AI会替代80%的重复性脑力工作，效率提升会远超预期。</p>
-                </div>
-                <div class="bg-white rounded-xl p-5 shadow-sm border-l-4 border-red-500 card-hover">
-                    <div class="flex items-center mb-3">
-                        <img src="https://picsum.photos/id/1074/40/40" alt="评论员" class="w-10 h-10 rounded-full mr-3">
-                        <div>
-                            <h4 class="font-bold">白岩松</h4>
-                            <p class="text-xs text-gray-500">时事评论员</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-sm line-clamp-3">医保家庭共济、最低工资上调、租房补贴这些政策真正落到实处，才是普通人获得感的来源，民生无小事，细节见温度。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 视频专区 -->
-    <section class="py-8 bg-light">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold flex items-center">
-                    <i class="fa fa-play-circle text-red-500 mr-2"></i>
-                    热点视频
-                </h2>
-                <a href="#" class="text-primary hover:underline">更多视频 <i class="fa fa-angle-right ml-1"></i></a>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                    <div class="relative h-[200px]">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="视频新闻" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute inset-0"></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2">现场直击：高温超导磁悬浮试验线首发运行全程</h3>
-                        <p class="text-gray-500 text-sm mb-3 line-clamp-2">记者独家登上首班试验列车，体验600公里时速贴地飞行的震撼感受。</p>
-                        <div class="flex items-center text-xs text-gray-400 justify-between">
-                            <span>12.5万次观看</span>
-                            <span>2小时前</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                    <div class="relative h-[200px]">
-                        <img src="https://picsum.photos/id/96/600/400" alt="视频封面" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="bg-white/20 backdrop-blur-sm rounded-full w-16 h-16 flex items-center justify-center">
-                                <i class="fa fa-play text-white text-2xl"></i>
-                            </div>
-                        </div>
-                        <span class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">03:42</span>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2">2026高考政策解读：新增AI类专业招生计划超10万个</h3>
-                        <p class="text-gray-500 text-sm mb-3 line-clamp-2">教育部召开发布会，详解今年高考招生政策变化，人工智能相关专业大幅扩招。</p>
-                        <div class="flex items-center text-xs text-gray-400 justify-between">
-                            <span>8.7万次观看</span>
-                            <span>5小时前</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                    <div class="relative h-[200px]">
-                        <img src="https://picsum.photos/id/26/600/400" alt="视频封面" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="bg-white/20 backdrop-blur-sm rounded-full w-16 h-16 flex items-center justify-center">
-                                <i class="fa fa-play text-white text-2xl"></i>
-                            </div>
-                        </div>
-                        <span class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">05:18</span>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2">NBA总决赛G1：湖人客场128-115击败凯尔特人 先下一城</h3>
-                        <p class="text-gray-500 text-sm mb-3 line-clamp-2">詹姆斯砍下38分12助攻，创造总决赛年龄最大30+10记录，率队客场取胜。</p>
-                        <div class="flex items-center text-xs text-gray-400 justify-between">
-                            <span>25.3万次观看</span>
-                            <span>8小时前</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 分类新闻列表 -->
-    <section class="py-8">
-        <div class="container mx-auto px-4">
-            <!-- 民生 -->
-            <div id="minsheng" class="mb-12">
-                <div class="flex items-center mb-6">
-                    <div class="w-1 h-8 bg-green-500 mr-3"></div>
-                    <h2 class="text-2xl font-bold">民生热点</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/292/600/400" alt="民生新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">全国多地调整最低工资标准 12省份涨幅超8%</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">截至5月26日，全国已有12个省份公布2026年最低工资标准调整方案，平均涨幅达到8.3%，惠及超2000万劳动者。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>人民日报</span>
-                                <span>3小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/225/600/400" alt="民生新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">多地出台租房补贴新政 应届大学生最高可领3万元补贴</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">北京、上海、广州等15个城市陆续发布应届毕业生租房补贴政策，符合条件的本科及以上学历毕业生可领取1-3万元不等的租房补贴。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>央视新闻</span>
-                                <span>7小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/433/600/400" alt="民生新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">新能源汽车下乡政策再升级 购车最高补贴2万元</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">新一轮新能源汽车下乡活动今日启动，农村居民购买符合条件的新能源汽车可获得最高2万元的购置补贴，同时享受免费安装充电桩等配套服务。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>经济日报</span>
-                                <span>9小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI -->
-            <div id="ai" class="mb-12">
-                <div class="flex items-center mb-6">
-                    <div class="w-1 h-8 bg-purple-500 mr-3"></div>
-                    <h2 class="text-2xl font-bold">AI动态</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/180/600/400" alt="AI新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">华为发布盘古4.0通用大模型 推理速度提升5倍</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">华为今日正式发布盘古大模型4.0版本，参数规模达到10万亿级，综合性能较前代提升300%，推理速度提升5倍，可支持超大规模复杂任务处理。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>科技日报</span>
-                                <span>4小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/3/600/400" alt="AI新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">AI生成内容版权新规正式实施 创作者权益得到明确保障</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">《人工智能生成内容版权保护条例》今日起正式施行，明确规定AI生成内容的版权归属，创作者使用AI工具创作的内容享有完整版权保护。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>中国新闻网</span>
-                                <span>6小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/160/600/400" alt="AI新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">国内首个AI医生临床应用试点落地 准确率达98.6%</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">国内首个AI辅助诊断系统在协和医院完成临床试点，在常见疾病诊断方面准确率达到98.6%，未来将逐步在全国医疗机构推广应用。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>健康时报</span>
-                                <span>11小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 体育 -->
-            <div id="sports" class="mb-12">
-                <div class="flex items-center mb-6">
-                    <div class="w-1 h-8 bg-red-500 mr-3"></div>
-                    <h2 class="text-2xl font-bold">体育赛事</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/1058/600/400" alt="体育新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">NBA总决赛G1：湖人128-115击败凯尔特人 詹姆斯38分创纪录</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">2026年NBA总决赛今日打响，洛杉矶湖人队客场挑战波士顿凯尔特人队，詹姆斯砍下38分12助攻，成为NBA历史上年龄最大的总决赛30+10球员。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>腾讯体育</span>
-                                <span>8小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/1060/600/400" alt="体育新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">世预赛18强：国足客场2-0击败韩国 取得小组赛首胜</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">世界杯预选赛亚洲区18强赛今日继续进行，中国男足客场2-0完胜韩国队，取得小组赛首场胜利，出线形势大为改观。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>央视体育</span>
-                                <span>5小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/43/600/400" alt="体育新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">法网公开赛：郑钦文2-0横扫对手 晋级女单八强</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">2026年法国网球公开赛今日继续女单第四轮争夺，中国选手郑钦文以6-2、6-3直落两盘击败美国选手佩古拉，职业生涯首次晋级法网女单八强。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>新浪体育</span>
-                                <span>3小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 股市 -->
-            <div id="stock" class="mb-12">
-                <div class="flex items-center mb-6">
-                    <div class="w-1 h-8 bg-blue-500 mr-3"></div>
-                    <h2 class="text-2xl font-bold">财经股市</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/180/600/400" alt="财经新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">A股三大指数集体大涨 沪指收复3300点 科创50涨超4%</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">今日A股市场迎来普涨行情，三大指数全线走高，沪指收盘上涨2.3%，收复3300点整数关口，深成指上涨3.1%，创业板指上涨3.5%，科创50指数大涨4.2%。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>第一财经</span>
-                                <span>2小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/366/600/400" alt="财经新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">央行宣布降准0.5个百分点 释放长期资金约1万亿元</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">中国人民银行今日宣布，为支持实体经济发展，促进综合融资成本稳中有降，决定于2026年6月1日下调金融机构存款准备金率0.5个百分点，预计释放长期资金约1万亿元。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>央行官网</span>
-                                <span>4小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover">
-                        <img src="https://picsum.photos/id/328/600/400" alt="财经新闻" class="w-full h-48 object-cover">
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg mb-2">英伟达市值突破4万亿美元 成为全球市值最高公司</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">英伟达股价昨日收盘上涨3.8%，市值首次突破4万亿美元大关，超过苹果公司成为全球市值最高的上市公司，今年以来股价累计涨幅已达120%。</p>
-                            <div class="flex justify-between items-center text-xs text-gray-400">
-                                <span>华尔街见闻</span>
-                                <span>6小时前</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="bg-neutral text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <p class="mb-2">今日热点资讯 | 2026年5月26日</p>
-                <p class="text-gray-400 text-sm">数据来源：各大媒体公开报道 仅供参考</p>
-                <p class="text-gray-500 text-xs mt-4">© 2026 热点资讯聚合平台</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // 激活状态切换
-                document.querySelectorAll('nav a').forEach(a => {
-                    a.classList.remove('text-primary', 'border-primary', 'border-b-2', 'pb-3');
-                    a.classList.add('text-gray-600');
-                });
-                this.classList.add('text-primary', 'border-primary', 'border-b-2', 'pb-3');
-                this.classList.remove('text-gray-600');
-            });
-        });
-    </script>
 </body>
 </html>
